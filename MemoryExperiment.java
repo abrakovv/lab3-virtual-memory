@@ -112,6 +112,9 @@ public class MemoryExperiment {
                 "Этап", "VmSize, МиБ", "RSS, МиБ", "Прирост faults", "Время, мс");
         System.out.println("--------------------------------------------------------------------------------");
 
+        // Фиксируем исходные показатели до создания и отображения файла.
+        printRow("Начало", previous, previous, Double.NaN);
+
         // Создаём разреженный файл и отображаем его приватно.
         // setLength задаёт размер файла; содержимое предварительно не записываем.
         try (RandomAccessFile file = new RandomAccessFile(FILE.toFile(), "rw")) {
