@@ -8,7 +8,7 @@ import java.nio.file.Path;
 import java.util.Locale;
 
 public class MemoryExperiment {
-    // 256 MiB, как требует новая версия лабораторной
+    
     private static final long SIZE = 256L * 1024 * 1024;
     private static final Path FILE = Path.of("big.bin");
 
